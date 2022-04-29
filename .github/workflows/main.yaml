@@ -1,2 +1,9 @@
-name: abc
-run: echo ${{date}}
+name: My First Workflow
+on: 
+  push:
+jobs:
+  echo_the_date:
+    runs-on:ubuntu-latest
+    steps:
+    -name: echo the date
+     run: echo "the current time and date is $(date)"
